@@ -1,0 +1,111 @@
+.header{
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 120px;
+    }
+    &__btn{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.logo{
+    margin: 0 auto;
+}
+
+.menu{
+    padding-left: 35px;
+    padding-right: 60px;
+    &__list{
+        display: flex;
+    }
+    &__list-item{
+        padding-left: 45px;
+        padding-right: 35px;
+    }
+    &__list-link{
+        @extend %title-font;
+        line-height: 22px;
+        text-align: center;
+        color: rgba(54, 56, 56, 0.9033);
+    }
+    &__list-link-active{
+        padding-bottom: 4px;
+        position: relative;
+        transition: .7s ease;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            border-radius: 1px;
+            background-color: rgba($black , .7);
+        }
+    }
+}
+.rightside__menu{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 694px;
+    background-color: white;
+    padding-top: 40px;
+    box-shadow: 2px 3px 17px 0px #000;
+    transition: all 1s ease;
+    z-index: 100;
+    &.rightside__menu--close{
+        transform: translateX(150%);
+    }
+    &-close{
+        background: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        margin-left: 50px;
+        margin-bottom: 60px;
+    }
+    &-content{
+        text-align: center;
+        max-width: 485px;
+        margin: 0 auto;
+    }
+    &-logo{
+        margin-bottom: 40px;
+        display: inline-block;
+    }
+    &-title{
+        color: $black;
+        font-size: 36px;
+        line-height: 51px;
+        @extend %title-font;
+        position: relative;
+        margin-bottom: 17px;
+        padding-bottom: 17px;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-width: 252px;
+            height: 1px;
+            margin: 0 auto;
+            background: #6D7278;
+
+        }
+    }
+    &-text{
+        margin-bottom: 75px;
+    }
+    &-img{
+        max-width: 485px;
+    }
+
+}

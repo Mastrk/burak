@@ -1,0 +1,84 @@
+.inspiration{
+    padding-top: 100px;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url('../../images/inspiration-bg.jpg');
+        height: 360px;
+        z-index: -1;
+    }
+    &__inner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__images{
+        margin-right: 78px;
+        margin-left: -230px;
+        width: 400px;
+        height: 480px;
+        background-size: 400px 480px;
+    }
+    &__title{
+        font-size: 32px;
+        line-height: 6px;
+        color: $black;
+        @extend %title-font;
+        padding-bottom: 16px;
+        margin-bottom: 24px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: #6d7278;
+            width: 200px;
+            height: 1px;
+        }
+    }
+    &__text{
+        margin-bottom: 30px;
+    }
+    &__content{
+        width: 825px;
+    }
+    &__item{
+        color: $black;
+        @extend %title-font;
+        line-height: 23px;
+        margin-bottom: 33px;
+    }
+    &__item-content{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 14px;
+        border-bottom: 3px solid #fff;
+        border-radius: 4px;
+    }
+    &__line{
+        height: 3px;
+        border-radius: 4px;
+        background-color: $black;
+        margin-top: -2px;
+    }
+}
+
+.partners{
+    padding: 16px 0 60px;
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    &__item{
+        margin: 0 auto;
+    }
+}
+
+.collection-about{
+    margin: 0 24px;
+}

@@ -1,0 +1,18 @@
+.breadcrumbs{
+    background: rgba(#DFDFDF, .5);
+    padding: 13px 14px;
+    position: relative;
+    z-index: 99;
+    &__list{
+        display: flex;
+    }
+    &__item:first-child::after{
+        content: '/';
+        margin-left: -4px;
+        margin-right: 4px;
+    }
+    &__link{
+        font-size: 14px;
+        color: $default;
+    }
+}
